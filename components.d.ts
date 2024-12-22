@@ -12,6 +12,7 @@ declare module 'vue' {
     ABackTop: typeof import('ant-design-vue/es')['BackTop']
     AButton: typeof import('ant-design-vue/es')['Button']
     ACol: typeof import('ant-design-vue/es')['Col']
+    ADivider: typeof import('ant-design-vue/es')['Divider']
     AFloatButton: typeof import('ant-design-vue/es')['FloatButton']
     AFloatButtonGroup: typeof import('ant-design-vue/es')['FloatButtonGroup']
     AList: typeof import('ant-design-vue/es')['List']
@@ -20,6 +21,7 @@ declare module 'vue' {
     AMenu: typeof import('ant-design-vue/es')['Menu']
     APopover: typeof import('ant-design-vue/es')['Popover']
     ARow: typeof import('ant-design-vue/es')['Row']
+    FooterBar: typeof import('./src/components/FooterBar.vue')['default']
     GlobalSideBar: typeof import('./src/components/GlobalSideBar.vue')['default']
     NavBar: typeof import('./src/components/NavBar.vue')['default']
   }

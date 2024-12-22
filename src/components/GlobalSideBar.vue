@@ -11,9 +11,9 @@
         </template>
         <template #tooltip>
           <div class="tooltip-info" @click="copyText(wechat)">
-            微信号：{{ wechat }}
+            {{ wechat }}
           </div>
-          <div style="width: 200px">
+          <div>
             <img
               src="/src/assets/images/wechat-qrcode.jpg"
               alt="微信二维码"
@@ -78,7 +78,7 @@ import { message } from "ant-design-vue";
 const wechat = ref<string>("z157606566503");
 const email = ref<string>("2062008467@qq.com");
 const phone = ref<string>("15760656503");
-const address = ref<string>("湖北省荆门市");
+const address = ref<string>("湖北省荆门市东宝区象山大道33豪");
 
 const copyText = async (text: string) => {
   try {
@@ -94,6 +94,14 @@ const copyText = async (text: string) => {
 #global_sidebar {
   position: fixed;
   right: 0;
+}
+
+.tooltip-info {
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .tooltip-info:hover {

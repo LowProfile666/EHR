@@ -23,6 +23,7 @@
 
         <ul class="footer-contact-us">
           <li>
+            <h6>张先生</h6>
             <img
               src="/src/assets/images/wechat-qrcode.jpg"
               :alt="COMPANY_NAME"
@@ -31,6 +32,7 @@
             />
           </li>
           <li>
+            <h6>公众号</h6>
             <img
               src="/src/assets/images/wechat-qrcode.jpg"
               :alt="COMPANY_NAME"

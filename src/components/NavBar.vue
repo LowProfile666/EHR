@@ -115,6 +115,7 @@ const items = ref<MenuProps["items"]>([
   display: flex;
   align-items: center;
   background-color: #f5f5f5;
+  z-index: 999;
 }
 
 #navbar .logo-area .logo-header {

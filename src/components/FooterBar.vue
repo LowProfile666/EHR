@@ -160,6 +160,7 @@ li {
 .footer-contact-us {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .footer-foot {

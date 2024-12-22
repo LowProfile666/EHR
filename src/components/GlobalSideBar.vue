@@ -94,6 +94,7 @@ const copyText = async (text: string) => {
 #global_sidebar {
   position: fixed;
   right: 0;
+  z-index: 999;
 }
 
 .tooltip-info {

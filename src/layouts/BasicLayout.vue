@@ -1,6 +1,6 @@
 <template>
-  <NavBar />
   <GlobalSideBar />
+  <NavBar />
   <div id="content">
     <router-view />
   </div>

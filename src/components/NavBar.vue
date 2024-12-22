@@ -42,6 +42,8 @@ import {
 import type { MenuProps } from "ant-design-vue";
 import { COMPANY_NAME } from "../constants.ts";
 
+// todo 二级菜单值从后端获取
+
 const current = ref<string[]>(["mail"]);
 const items = ref<MenuProps["items"]>([
   {

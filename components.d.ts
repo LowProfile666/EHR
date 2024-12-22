@@ -11,6 +11,8 @@ declare module 'vue' {
     AAvatar: typeof import('ant-design-vue/es')['Avatar']
     ABackTop: typeof import('ant-design-vue/es')['BackTop']
     AButton: typeof import('ant-design-vue/es')['Button']
+    ACard: typeof import('ant-design-vue/es')['Card']
+    ACardMeta: typeof import('ant-design-vue/es')['CardMeta']
     ACol: typeof import('ant-design-vue/es')['Col']
     ADivider: typeof import('ant-design-vue/es')['Divider']
     AFloatButton: typeof import('ant-design-vue/es')['FloatButton']
@@ -26,6 +28,7 @@ declare module 'vue' {
     FooterBar: typeof import('./src/components/FooterBar.vue')['default']
     GlobalSideBar: typeof import('./src/components/GlobalSideBar.vue')['default']
     NavBar: typeof import('./src/components/NavBar.vue')['default']
+    News: typeof import('./src/components/content/News.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

@@ -129,7 +129,6 @@ const footerData = [
 /* 单列样式 */
 .footer-link {
   flex: 1 1 100px;
-  min-width: 150px;
 }
 
 .footer-link-title {

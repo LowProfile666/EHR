@@ -16,6 +16,6 @@ import News from "../components/content/News.vue";
 
 <style scoped>
 #indexPage {
-  background-color: lightgray;
+  background: linear-gradient(to bottom, #ffffff, #6bc4c3, #37adab);
 }
 </style>

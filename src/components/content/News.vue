@@ -1,6 +1,6 @@
 <template>
   <div id="news_content">
-    <a-card title="新闻动态">
+    <a-card title="新闻动态" class="news-content">
       <template #extra
         ><a class="title-more" @click="showNewsList">
           <MenuOutlined
@@ -20,7 +20,9 @@
           class="card"
         >
           <template #cover>
-            <img :alt="news.title" :src="news.src" class="card-img" />
+            <div class="card-img-area">
+              <img :alt="news.title" :src="news.src" class="card-img" />
+            </div>
           </template>
           <a-card-meta :title="news.title" :description="news.description">
           </a-card-meta>
@@ -152,13 +154,9 @@ const showNewsList = () => {
   margin: 0 auto;
   padding: 30px;
 }
-.title {
-  padding-bottom: 10px;
-  display: flex;
-  align-items: center; /* 垂直居中对齐子元素 */
-  justify-content: space-between; /* 将两端的元素分散到容器两侧 */
+.news-content {
+  background: rgba(255, 255, 255, 0.5);
 }
-
 .title-more {
   margin-left: auto; /* 将当前元素推到最右侧 */
   text-decoration: none;
@@ -173,10 +171,18 @@ const showNewsList = () => {
   height: 100%;
   flex: 1 1 auto; /* 防止卡片被强制压缩 */
 }
-.card-img {
+.card-img-area {
+  width: 100%;
   height: 240px;
+  overflow: hidden; /* 限制子元素溢出 */
+  position: relative; /* 确保溢出限制生效 */
 }
-.list-img {
-  width: 40%;
+.card-img {
+  height: 100%;
+  width: 100%;
+}
+.card-img:hover {
+  transform: scale(1.2);
+  transition: 1.5s;
 }
 </style>

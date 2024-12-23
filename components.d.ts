@@ -23,13 +23,16 @@ declare module 'vue' {
     AMenu: typeof import('ant-design-vue/es')['Menu']
     APopover: typeof import('ant-design-vue/es')['Popover']
     ARow: typeof import('ant-design-vue/es')['Row']
-    Banner: typeof import('./src/components/content/Banner.vue')['default']
+    Banner: typeof import('./src/components/content/BannerBar.vue')['default']
+    BannerBar: typeof import('./src/components/content/BannerBar.vue')['default']
     Content: typeof import('./src/components/Content.vue')['default']
     FooterBar: typeof import('./src/components/FooterBar.vue')['default']
     GlobalSideBar: typeof import('./src/components/GlobalSideBar.vue')['default']
     NavBar: typeof import('./src/components/NavBar.vue')['default']
-    News: typeof import('./src/components/content/News.vue')['default']
+    News: typeof import('./src/components/content/NewsBar.vue')['default']
+    NewsBar: typeof import('./src/components/content/NewsBar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    VideoBar: typeof import('./src/components/content/VideoBar.vue')['default']
   }
 }

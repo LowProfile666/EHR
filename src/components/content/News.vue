@@ -1,28 +1,61 @@
 <template>
   <div id="news_content">
-    <div class="title">
-      <h3>新闻动态</h3>
-      <a class="title-more" href="#">更多</a>
-    </div>
-    <div class="cards">
-      <a-card
-        hoverable
-        v-for="(news, index) in newsArr"
-        :key="index"
-        class="card"
-      >
-        <template #cover>
-          <img :alt="news.title" :src="news.src" class="card-img" />
-        </template>
-        <a-card-meta title="Card title" :description="news.description">
-        </a-card-meta>
-      </a-card>
-    </div>
+    <a-card title="新闻动态">
+      <template #extra
+        ><a class="title-more" @click="showNewsList">
+          <MenuOutlined
+            v-if="showCardsFlag"
+            style="padding: 10px; color: #37adab; font-size: large"
+          />
+          <CloseOutlined
+            v-if="showListFlag"
+            style="padding: 10px; color: #37adab; font-size: large"
+          /> </a
+      ></template>
+      <div v-if="showCardsFlag" class="cards">
+        <a-card
+          hoverable
+          v-for="(news, index) in newsCard"
+          :key="index"
+          class="card"
+        >
+          <template #cover>
+            <img :alt="news.title" :src="news.src" class="card-img" />
+          </template>
+          <a-card-meta :title="news.title" :description="news.description">
+          </a-card-meta>
+        </a-card>
+      </div>
+      <div v-if="showListFlag" class="list">
+        <a-list item-layout="horizontal" :data-source="newsList" size="small">
+          <template #renderItem="{ item }">
+            <a-list-item>
+              <a-list-item-meta :description="item.description">
+                <template #title>
+                  <a :href="item.detailUrl">{{ item.title }}</a>
+                </template>
+                <template #avatar> {{ item.time }} </template>
+              </a-list-item-meta>
+            </a-list-item>
+          </template>
+          <template #footer>
+            <div style="text-align: center">
+              <a-button
+                style="background-color: #37adab; color: white"
+                size="large"
+                >查看更多</a-button
+              >
+            </div>
+          </template>
+        </a-list>
+      </div>
+    </a-card>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from "vue";
+import { MenuOutlined, CloseOutlined } from "@ant-design/icons-vue";
 
 // todo 数据从后端获取，更多按钮跳转新闻列表页面（或者隐藏当前卡片，分页显示列表）
 
@@ -31,33 +64,90 @@ interface News {
   src: string;
   title: string;
   description: string;
+  detailUrl: string;
+  time: string;
 }
 
-const newsArr = ref<News[]>([
+let showCardsFlag = ref(true);
+let showListFlag = ref(false);
+
+const newsCard = ref<News[]>([
   {
     id: "1",
     title: "Title 1",
     description: "description 1",
     src: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+    detailUrl: "",
+    time: "2021-12-25",
   },
   {
     id: "2",
     title: "Title 2",
     description: "description 2",
     src: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+    detailUrl: "",
+    time: "2021-12-24",
   },
   {
     id: "3",
     title: "Title 3",
     description: "description 3",
     src: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+    detailUrl: "",
+    time: "2021-12-23",
   },
 ]);
+const newsList = ref<News[]>([
+  {
+    id: "1",
+    title: "Title 1",
+    description: "description 1",
+    src: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+    detailUrl: "",
+    time: "2021-12-25",
+  },
+  {
+    id: "2",
+    title: "Title 2",
+    description: "description 2",
+    src: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+    detailUrl: "",
+    time: "2021-12-24",
+  },
+  {
+    id: "3",
+    title: "Title 3",
+    description: "description 3",
+    src: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+    detailUrl: "",
+    time: "2021-12-23",
+  },
+  {
+    id: "4",
+    title: "Title 4",
+    description: "description 4",
+    src: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+    detailUrl: "",
+    time: "2021-12-24",
+  },
+  {
+    id: "5",
+    title: "Title 35",
+    description: "description 5",
+    src: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
+    detailUrl: "",
+    time: "2021-12-23",
+  },
+]);
+
+const showNewsList = () => {
+  showCardsFlag.value = showListFlag.value;
+  showListFlag.value = !showListFlag.value;
+};
 </script>
 
 <style scoped>
 #news_content {
-  background-color: lightblue;
   width: 80vw;
   margin: 0 auto;
   padding: 30px;
@@ -85,5 +175,8 @@ const newsArr = ref<News[]>([
 }
 .card-img {
   height: 240px;
+}
+.list-img {
+  width: 40%;
 }
 </style>

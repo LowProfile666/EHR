@@ -9,6 +9,9 @@
     <div class="video-area">
       <VideoBar />
     </div>
+    <div class="honor-area">
+      <HonorBar />
+    </div>
   </div>
 </template>
 
@@ -16,6 +19,7 @@
 import Banner from "../components/content/BannerBar.vue";
 import News from "../components/content/NewsBar.vue";
 import VideoBar from "../components/content/VideoBar.vue";
+import HonorBar from "../components/content/HonorBar.vue";
 </script>
 
 <style scoped>
@@ -23,6 +27,6 @@ import VideoBar from "../components/content/VideoBar.vue";
   background: linear-gradient(to bottom, #ffffff, #6bc4c3, #37adab);
 }
 .video-area {
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 </style>

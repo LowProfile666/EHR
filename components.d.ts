@@ -28,6 +28,7 @@ declare module 'vue' {
     Content: typeof import('./src/components/Content.vue')['default']
     FooterBar: typeof import('./src/components/FooterBar.vue')['default']
     GlobalSideBar: typeof import('./src/components/GlobalSideBar.vue')['default']
+    HonorBar: typeof import('./src/components/content/HonorBar.vue')['default']
     NavBar: typeof import('./src/components/NavBar.vue')['default']
     News: typeof import('./src/components/content/NewsBar.vue')['default']
     NewsBar: typeof import('./src/components/content/NewsBar.vue')['default']

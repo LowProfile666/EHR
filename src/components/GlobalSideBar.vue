@@ -3,7 +3,7 @@
     <a-float-button-group
       shape="circle"
       :style="{
-        top: '50%',
+        bottom: '50px',
         right: '0',
       }"
     >

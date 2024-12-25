@@ -23,6 +23,8 @@ declare module 'vue' {
     AMenu: typeof import('ant-design-vue/es')['Menu']
     APopover: typeof import('ant-design-vue/es')['Popover']
     ARow: typeof import('ant-design-vue/es')['Row']
+    AStatistic: typeof import('ant-design-vue/es')['Statistic']
+    ATypographyParagraph: typeof import('ant-design-vue/es')['TypographyParagraph']
     Banner: typeof import('./src/components/content/BannerBar.vue')['default']
     BannerBar: typeof import('./src/components/content/BannerBar.vue')['default']
     Content: typeof import('./src/components/Content.vue')['default']
@@ -35,6 +37,7 @@ declare module 'vue' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SolutionBar: typeof import('./src/components/content/SolutionBar.vue')['default']
+    StatisticsBar: typeof import('./src/components/content/StatisticsBar.vue')['default']
     VideoBar: typeof import('./src/components/content/VideoBar.vue')['default']
   }
 }

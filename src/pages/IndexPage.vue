@@ -42,7 +42,4 @@ import SolutionBar from "../components/content/SolutionBar.vue";
 .honor-area {
   margin-bottom: 30px;
 }
-.solution-area {
-  margin-bottom: 30px;
-}
 </style>

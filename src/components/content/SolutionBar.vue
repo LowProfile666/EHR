@@ -113,10 +113,8 @@ const solutions = ref<solutionObj[]>([
 }
 
 .swiper-slide {
+  height: 90%;
   background: #fff;
-  width: 21.5% !important;
-  height: 92%;
-  padding: 20px 10px 10px;
   border-radius: 10px;
   user-select: none;
   overflow: hidden;
@@ -147,15 +145,16 @@ a {
 .content-title {
   font-size: 20px;
   color: #333947;
-  margin-bottom: 30px;
-  margin-top: 30px;
   font-weight: 400;
+  text-indent: 2em;
+  margin: 20px 0;
 }
 .content-description {
   width: 100%;
   font-size: 14px;
   color: #464d61;
   line-height: 1.5em;
-  letter-spacing: 0.5px;
+  text-indent: 2em;
+  padding-left: 1px;
 }
 </style>

@@ -12,6 +12,9 @@
     <div class="honor-area">
       <HonorBar />
     </div>
+    <div class="solution-area">
+      <SolutionBar />
+    </div>
   </div>
 </template>
 
@@ -20,11 +23,12 @@ import Banner from "../components/content/BannerBar.vue";
 import News from "../components/content/NewsBar.vue";
 import VideoBar from "../components/content/VideoBar.vue";
 import HonorBar from "../components/content/HonorBar.vue";
+import SolutionBar from "../components/content/SolutionBar.vue";
 </script>
 
 <style scoped>
 #indexPage {
-  background: linear-gradient(to bottom, #ffffff, #6bc4c3, #37adab);
+  background-color: #efefef;
 }
 .video-area {
   padding-bottom: 30px;

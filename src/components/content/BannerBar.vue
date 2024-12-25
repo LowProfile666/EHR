@@ -27,7 +27,7 @@
 
 <script lang="ts" setup>
 import { Swiper, SwiperSlide } from "swiper/vue"; // swiper 所需组件
-import { Autoplay, Navigation, Pagination, A11y } from "swiper"; // 分页器
+import { Autoplay, Navigation, Pagination, A11y } from "swiper/modules"; // 分页器
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";

@@ -34,6 +34,7 @@ declare module 'vue' {
     NewsBar: typeof import('./src/components/content/NewsBar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SolutionBar: typeof import('./src/components/content/SolutionBar.vue')['default']
     VideoBar: typeof import('./src/components/content/VideoBar.vue')['default']
   }
 }

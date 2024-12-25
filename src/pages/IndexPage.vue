@@ -30,13 +30,19 @@ import SolutionBar from "../components/content/SolutionBar.vue";
 #indexPage {
   background-color: #efefef;
 }
+.banner-area {
+  margin-bottom: 30px;
+}
+.news-area {
+  margin-bottom: 30px;
+}
 .video-area {
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 .honor-area {
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 .solution-area {
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 </style>

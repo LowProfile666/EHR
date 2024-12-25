@@ -1,6 +1,6 @@
 <template>
   <div id="news_content">
-    <a-card title="新闻动态" class="news-content">
+    <a-card class="news-content" title="新闻咨询">
       <template #extra
         ><a class="title-more" @click="showNewsList">
           <MenuOutlined
@@ -152,10 +152,9 @@ const showNewsList = () => {
 #news_content {
   width: 80vw;
   margin: 0 auto;
-  padding: 30px;
 }
 .news-content {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.8);
 }
 .title-more {
   margin-left: auto; /* 将当前元素推到最右侧 */

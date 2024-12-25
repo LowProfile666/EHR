@@ -33,75 +33,38 @@
 </template>
 <script lang="ts" setup>
 import { h, ref } from "vue";
-import {
-  MailOutlined,
-  AppstoreOutlined,
-  SettingOutlined,
-  MenuOutlined,
-} from "@ant-design/icons-vue";
+import { MenuOutlined } from "@ant-design/icons-vue";
 import type { MenuProps } from "ant-design-vue";
 import { COMPANY_NAME } from "../constants.ts";
 
 // todo 二级菜单值从后端获取
 
-const current = ref<string[]>(["mail"]);
+const current = ref<string[]>(["index"]);
 const items = ref<MenuProps["items"]>([
   {
-    key: "mail",
-    icon: () => h(MailOutlined),
-    label: "Navigation One",
-    title: "Navigation One",
+    key: "index",
+    label: "首页",
+    title: "首页",
   },
   {
-    key: "app",
-    icon: () => h(AppstoreOutlined),
-    label: "Navigation Two",
-    title: "Navigation Two",
+    key: "news",
+    label: "新闻动态",
+    title: "新闻动态",
   },
   {
-    key: "sub1",
-    icon: () => h(SettingOutlined),
-    label: "Navigation Three - Submenu",
-    title: "Navigation Three - Submenu",
-    children: [
-      {
-        type: "group",
-        label: "Item 1",
-        children: [
-          {
-            label: "Option 1",
-            key: "setting:1",
-          },
-          {
-            label: "Option 2",
-            key: "setting:2",
-          },
-        ],
-      },
-      {
-        type: "group",
-        label: "Item 2",
-        children: [
-          {
-            label: "Option 3",
-            key: "setting:3",
-          },
-          {
-            label: "Option 4",
-            key: "setting:4",
-          },
-        ],
-      },
-    ],
+    key: "product",
+    label: "产品服务",
+    title: "产品服务",
   },
   {
-    key: "alipay",
-    label: h(
-      "a",
-      { href: "https://antdv.com", target: "_blank" },
-      "Navigation Four - Link",
-    ),
-    title: "Navigation Four - Link",
+    key: "solution",
+    label: "解决方案",
+    title: "解决方案",
+  },
+  {
+    key: "about",
+    label: "关于我们",
+    title: "关于我们",
   },
 ]);
 </script>
@@ -129,5 +92,7 @@ const items = ref<MenuProps["items"]>([
 #navbar .menu-area .menu {
   justify-content: right;
   background-color: unset;
+  font-size: large;
+  font-weight: bold;
 }
 </style>

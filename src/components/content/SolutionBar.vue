@@ -33,16 +33,11 @@
 </template>
 
 <script lang="ts" setup>
-// Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
-
-// Import Swiper styles
 import "swiper/css";
-
 import "swiper/css/pagination";
 import { A11y, Autoplay, Navigation, Pagination } from "swiper/modules";
 import { ref } from "vue";
-import { CloseOutlined, MenuOutlined } from "@ant-design/icons-vue";
 
 interface solutionObj {
   id: string;
@@ -65,7 +60,8 @@ const solutions = ref<solutionObj[]>([
   {
     id: "2",
     title: "企业培训服务",
-    description: "我们提供系统的企业培训解决方案，帮助企业提升员工技能。",
+    description:
+      "我们提供系统的企业培训解决方案，帮助企业提升员工技能，真的是蛇这样的吗，没错的hi是的。",
     src: "/src/assets/images/solution/002.svg",
     detail: "/detail/2",
   },
@@ -119,10 +115,11 @@ const solutions = ref<solutionObj[]>([
 .swiper-slide {
   background: #fff;
   width: 21.5% !important;
-  height: 90%;
+  height: 92%;
   padding: 20px 10px 10px;
   border-radius: 10px;
   user-select: none;
+  overflow: hidden;
 }
 
 .swiper-slide:hover {
@@ -155,10 +152,10 @@ a {
   font-weight: 400;
 }
 .content-description {
+  width: 100%;
   font-size: 14px;
   color: #464d61;
   line-height: 1.5em;
   letter-spacing: 0.5px;
-  overflow: hidden;
 }
 </style>

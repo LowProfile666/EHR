@@ -33,4 +33,10 @@ import SolutionBar from "../components/content/SolutionBar.vue";
 .video-area {
   padding-bottom: 30px;
 }
+.honor-area {
+  padding-bottom: 30px;
+}
+.solution-area {
+  padding-bottom: 30px;
+}
 </style>

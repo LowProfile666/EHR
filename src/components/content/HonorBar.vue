@@ -1,6 +1,7 @@
 <template>
   <div id="honorBar">
     <p class="title">{{ barTitle }}</p>
+    <a-divider />
     <swiper
       :effect="'coverflow'"
       :grabCursor="true"
@@ -16,7 +17,6 @@
       }"
       :pagination="true"
       :modules="modules"
-      class="mySwiper"
     >
       <swiper-slide v-for="item in images" :key="item.id"
         ><img :src="item.src" :alt="item.title" />
@@ -84,6 +84,8 @@ const images = ref<imageObj[]>([
 
 <style scoped>
 #honorBar {
+  width: 80vw;
+  margin: 0 auto;
 }
 
 .title {
@@ -94,8 +96,6 @@ const images = ref<imageObj[]>([
 
 .swiper {
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
 }
 
 .swiper-slide {
@@ -114,5 +114,6 @@ const images = ref<imageObj[]>([
   text-align: center;
   font-size: 20px;
   margin-top: 20px;
+  overflow: hidden;
 }
 </style>

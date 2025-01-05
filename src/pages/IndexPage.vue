@@ -14,8 +14,13 @@
     <div class="talent-area">
       <TalentServiceBar />
     </div>
+    <div class="flexwork-area">
+      <FlexworkBar />
+    </div>
     <div class="solution-area">
-      <SolutionBar />
+      <p class="title">解决方案</p>
+      <a-divider />
+      <!--      <SolutionBar />-->
     </div>
   </div>
 </template>
@@ -28,6 +33,7 @@ import SolutionBar from "../components/content/SolutionBar.vue";
 import { onMounted, ref } from "vue";
 import { getBannerArticles, getNewsArticles } from "../api";
 import TalentServiceBar from "../components/content/TalentServiceBar.vue";
+import FlexworkBar from "../components/content/FlexworkBar.vue";
 
 const banners = ref([]);
 const news = ref([]);
@@ -53,6 +59,12 @@ onMounted(() => {
 #indexPage {
   background-color: #efefef;
 }
+.title {
+  text-align: center;
+  color: black;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
 .banner-area {
   margin-bottom: 30px;
 }
@@ -65,6 +77,10 @@ onMounted(() => {
 .talent-area {
   margin-bottom: 30px;
 }
+.flexwork-area {
+  margin-bottom: 30px;
+}
+
 .banner-spin {
   width: 100%;
   height: 90vh;

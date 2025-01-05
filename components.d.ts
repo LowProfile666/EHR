@@ -31,6 +31,7 @@ declare module 'vue' {
     Banner: typeof import('./src/components/content/BannerBar.vue')['default']
     BannerBar: typeof import('./src/components/content/BannerBar.vue')['default']
     Content: typeof import('./src/components/Content.vue')['default']
+    FlexworkBar: typeof import('./src/components/content/FlexworkBar.vue')['default']
     FooterBar: typeof import('./src/components/FooterBar.vue')['default']
     GlobalSideBar: typeof import('./src/components/GlobalSideBar.vue')['default']
     HonorBar: typeof import('./src/components/content/HonorBar.vue')['default']

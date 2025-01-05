@@ -1,11 +1,9 @@
 <template>
   <div id="solutionBar">
-    <p class="title">{{ barTitle }}</p>
-    <a-divider />
     <div class="solution-swiper">
       <swiper
-        :slidesPerView="4"
-        :spaceBetween="30"
+        :breakpoints="breakpoints"
+        :spaceBetween="20"
         :pagination="{
           clickable: true,
         }"
@@ -47,63 +45,46 @@ interface solutionObj {
   detail: string;
 }
 
+const props = defineProps({
+  data: {
+    type: Array,
+  },
+});
+
 const modules = [Autoplay, Pagination, Navigation, A11y];
-const barTitle = ref<string>("解决方案");
-const solutions = ref<solutionObj[]>([
-  {
-    id: "1",
-    title: "招聘流程外包",
-    description: "湖北睿才始于2005年在湖北荆门成立，",
-    src: "/src/assets/images/solution/001.svg",
-    detail: "/detail/1",
+const solutions = ref<solutionObj[]>(props.data);
+
+// Swiper 的响应式断点设置
+const breakpoints = {
+  320: {
+    slidesPerView: 1,
+    spaceBetween: 10,
   },
-  {
-    id: "2",
-    title: "企业培训服务",
-    description:
-      "我们提供系统的企业培训解决方案，帮助企业提升员工技能，真的是蛇这样的吗，没错的hi是的。",
-    src: "/src/assets/images/solution/002.svg",
-    detail: "/detail/2",
+  640: {
+    slidesPerView: 2,
+    spaceBetween: 15,
   },
-  {
-    id: "3",
-    title: "人力资源咨询",
-    description: "专家团队为客户提供专业的人力资源管理咨询服务。",
-    src: "/src/assets/images/solution/003.svg",
-    detail: "/detail/3",
+  1024: {
+    slidesPerView: 3,
+    spaceBetween: 20,
   },
-  {
-    id: "4",
-    title: "薪酬管理服务",
-    description: "提供全面的薪酬管理方案，确保企业薪酬制度的合理性。",
-    src: "/src/assets/images/solution/004.svg",
-    detail: "/detail/4",
+  1280: {
+    slidesPerView: 3,
+    spaceBetween: 30,
   },
-  {
-    id: "5",
-    title: "员工关系管理",
-    description: "帮助企业建立良好的员工关系，提升团队凝聚力。",
-    src: "/src/assets/images/solution/005.svg",
-    detail: "/detail/5",
-  },
-]);
+};
 </script>
 
 <style scoped>
 #solutionBar {
-  width: 80vw;
+  width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
-}
-.title {
-  text-align: center;
-  color: black;
-  font-size: 25px;
-  margin-bottom: 20px;
 }
 
 .solution-swiper {
   width: 100%;
-  height: 450px;
+  height: auto;
 }
 
 .swiper {
@@ -113,28 +94,33 @@ const solutions = ref<solutionObj[]>([
 }
 
 .swiper-slide {
-  height: 90%;
+  height: auto;
   background: #fff;
   border-radius: 10px;
   user-select: none;
   overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
 .swiper-slide:hover {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .content-cover {
   width: 100%;
-  height: 50%;
+  height: 200px; /* 调整高度 */
   overflow: hidden;
   text-align: center;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .content-cover img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 a {
@@ -143,18 +129,20 @@ a {
 }
 
 .content-title {
-  font-size: 20px;
+  font-size: 18px;
   color: #333947;
-  font-weight: 400;
-  text-indent: 2em;
-  margin: 20px 0;
+  font-weight: 500;
+  text-align: center;
+  margin: 10px 0;
 }
+
 .content-description {
   width: 100%;
   font-size: 14px;
   color: #464d61;
   line-height: 1.5em;
-  text-indent: 2em;
-  padding-left: 1px;
+  text-align: justify; /* 调整为两端对齐 */
+  padding: 0 10px;
+  word-wrap: break-word; /* 支持长文字换行 */
 }
 </style>

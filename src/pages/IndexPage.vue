@@ -11,8 +11,8 @@
     <div class="video-area">
       <VideoBar />
     </div>
-    <div class="honor-area">
-      <HonorBar />
+    <div class="talent-area">
+      <TalentServiceBar />
     </div>
     <div class="solution-area">
       <SolutionBar />
@@ -24,10 +24,10 @@
 import Banner from "../components/content/BannerBar.vue";
 import News from "../components/content/NewsBar.vue";
 import VideoBar from "../components/content/VideoBar.vue";
-import HonorBar from "../components/content/HonorBar.vue";
 import SolutionBar from "../components/content/SolutionBar.vue";
 import { onMounted, ref } from "vue";
 import { getBannerArticles, getNewsArticles } from "../api";
+import TalentServiceBar from "../components/content/TalentServiceBar.vue";
 
 const banners = ref([]);
 const news = ref([]);
@@ -62,7 +62,7 @@ onMounted(() => {
 .video-area {
   margin-bottom: 30px;
 }
-.honor-area {
+.talent-area {
   margin-bottom: 30px;
 }
 .banner-spin {

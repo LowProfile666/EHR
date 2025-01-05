@@ -23,6 +23,7 @@ declare module 'vue' {
     AMenu: typeof import('ant-design-vue/es')['Menu']
     APopover: typeof import('ant-design-vue/es')['Popover']
     ARow: typeof import('ant-design-vue/es')['Row']
+    ASpin: typeof import('ant-design-vue/es')['Spin']
     AStatistic: typeof import('ant-design-vue/es')['Statistic']
     ATypographyParagraph: typeof import('ant-design-vue/es')['TypographyParagraph']
     Banner: typeof import('./src/components/content/BannerBar.vue')['default']

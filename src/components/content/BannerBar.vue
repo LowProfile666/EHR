@@ -12,12 +12,17 @@
       :modules="modules"
     >
       <swiper-slide v-for="(slide, index) in slides" :key="index"
-        ><img class="slide-img" :src="slide.src" :alt="slide.title" />
+        ><img class="slide-img" :src="slide.coverUrl" :alt="slide.title" />
         <div class="swiper-info">
           <div class="info-title">{{ slide.title }}</div>
           <div class="info-desc">{{ slide.description }}</div>
           <div class="info-detail-button">
-            <a-button ghost size="large">点击查看详情</a-button>
+            <a-button
+              ghost
+              size="large"
+              @click="detail(slide.id, slide.detailUrl)"
+              >点击查看详情</a-button
+            >
           </div>
         </div>
       </swiper-slide>
@@ -31,9 +36,9 @@ import { Autoplay, Navigation, Pagination, A11y } from "swiper/modules"; // 分�
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { ref } from "vue";
+import { ref, defineProps } from "vue";
+import { useRouter } from "vue-router";
 
-const modules = [Autoplay, Pagination, Navigation, A11y];
 interface Slide {
   id: string;
   src: string;
@@ -41,38 +46,19 @@ interface Slide {
   description: string;
 }
 
-const slides = ref<Slide[]>([
-  {
-    id: "1",
-    src: "/src/assets/images/banner/banner01.jpg",
-    title: "Banner 1",
-    description: "Description for Banner 1",
+const props = defineProps({
+  data: {
+    type: Array,
   },
-  {
-    id: "2",
-    src: "/src/assets/images/banner/banner01.gif",
-    title: "Banner 2",
-    description: "Description for Banner 2",
-  },
-  {
-    id: "3",
-    src: "/src/assets/images/banner/banner02.gif",
-    title: "Banner 3",
-    description: "Description for Banner 3",
-  },
-  {
-    id: "4",
-    src: "/src/assets/images/banner/banner03.gif",
-    title: "Banner 4",
-    description: "Description for Banner 4",
-  },
-  {
-    id: "5",
-    src: "/src/assets/images/banner/banner03.jpg",
-    title: "Banner 5",
-    description: "Description for Banner 5",
-  },
-]);
+});
+
+const modules = [Autoplay, Pagination, Navigation, A11y];
+const slides = ref<Slide[]>(props.data);
+const router = useRouter();
+
+const detail = (id, url) => {
+  router.push({ name: "Detail", params: { id, url } });
+};
 </script>
 
 <style scoped>

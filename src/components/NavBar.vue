@@ -42,9 +42,29 @@ import { COMPANY_NAME } from "../constants.ts";
 const current = ref<string[]>(["index"]);
 const items = ref<MenuProps["items"]>([
   {
-    key: "index",
-    label: "首页",
-    title: "首页",
+    key: "ehr",
+    label: "E-HR",
+    title: "E-HR",
+  },
+  {
+    key: "hr",
+    label: "人力资源",
+    title: "人力资源",
+  },
+  {
+    key: "training",
+    label: "培训",
+    title: "培训",
+  },
+  {
+    key: "headhunting",
+    label: "猎头",
+    title: "猎头",
+  },
+  {
+    key: "labor",
+    label: "劳务",
+    title: "劳务",
   },
   {
     key: "news",
@@ -52,19 +72,14 @@ const items = ref<MenuProps["items"]>([
     title: "新闻动态",
   },
   {
-    key: "product",
-    label: "产品服务",
-    title: "产品服务",
-  },
-  {
-    key: "solution",
-    label: "解决方案",
-    title: "解决方案",
-  },
-  {
     key: "about",
     label: "关于我们",
     title: "关于我们",
+  },
+  {
+    key: "contact",
+    label: "联系我们",
+    title: "联系我们",
   },
 ]);
 </script>

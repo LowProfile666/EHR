@@ -3,9 +3,9 @@
     <div class="text-area">
       <div class="title">{{ barTitle }}</div>
       <div class="description">{{ barDescription }}</div>
-      <div class="content">
-        <SolutionBar :data="data" />
-      </div>
+    </div>
+    <div class="content">
+      <SolutionBar :data="data" />
     </div>
   </div>
 </template>

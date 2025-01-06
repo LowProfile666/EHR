@@ -14,8 +14,12 @@
     <div class="talent-area">
       <TalentServiceBar />
     </div>
+
     <div class="flexwork-area">
       <FlexworkBar />
+    </div>
+    <div class="ehrsolution-area">
+      <EhrSolutionBar />
     </div>
     <div class="solution-area">
       <p class="title">解决方案</p>
@@ -34,6 +38,7 @@ import { onMounted, ref } from "vue";
 import { getBannerArticles, getNewsArticles } from "../api";
 import TalentServiceBar from "../components/content/TalentServiceBar.vue";
 import FlexworkBar from "../components/content/FlexworkBar.vue";
+import EhrSolutionBar from "../components/content/EhrSolutionBar.vue";
 
 const banners = ref([]);
 const news = ref([]);
@@ -72,12 +77,6 @@ onMounted(() => {
   margin-bottom: 30px;
 }
 .video-area {
-  margin-bottom: 30px;
-}
-.talent-area {
-  margin-bottom: 30px;
-}
-.flexwork-area {
   margin-bottom: 30px;
 }
 

@@ -2,6 +2,7 @@ import { createWebHistory, createRouter } from "vue-router";
 import IndexPage from "../pages/IndexPage.vue";
 import DetailPage from "../pages/DetailPage.vue";
 import NotFound from "../pages/exception/NotFound.vue";
+import Error from "../pages/exception/Error.vue";
 
 const routes = [
   {
@@ -23,6 +24,17 @@ const routes = [
     path: "/404",
     name: "NotFound",
     component: NotFound,
+  },
+  {
+    path: "/500",
+    name: "Error",
+    component: Error,
+  },
+  // 捕获所有未定义路径，跳转到 404 页面
+  {
+    path: "/:pathMatch(.*)*", // Vue Router 4.x 的通配符写法
+    name: "CatchAll",
+    redirect: "/404", // 重定向到 404 页面
   },
 ];
 

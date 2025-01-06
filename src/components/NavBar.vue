@@ -15,6 +15,7 @@
           mode="horizontal"
           :items="items"
           class="menu"
+          style="border-bottom: none"
         >
           <template #overflowedIndicator>
             <MenuOutlined

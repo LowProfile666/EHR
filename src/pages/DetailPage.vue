@@ -60,13 +60,15 @@ const formatTime = (time: string | undefined): string => {
 // 初次加载时获取文章
 onMounted(() => {
   if (articleId) {
-    getArticleById(articleId).then((resp) => {
-      article.value = resp.data;
-      if (resp.data) loading.value = false;
-      else {
-        router.push("/404");
-      }
-    });
+    getArticleById(articleId)
+      .then((resp) => {
+        loading.value = false;
+        if (!resp.data) router.push("/404");
+      })
+      .catch((err) => {
+        loading.value = false;
+        router.push("/500");
+      });
   }
 });
 </script>

@@ -11,19 +11,22 @@
         :modules="modules"
       >
         <swiper-slide v-for="item in solutions" :key="item.id">
-          <div class="content-cover">
-            <a :href="item.detail">
-              <img :src="item.src" :alt="item.title" />
-            </a>
-          </div>
-          <div class="content-title">
-            <a :href="item.detail">{{ item.title }}</a>
-          </div>
-          <div class="content-description">
-            <a :href="item.detail">
-              {{ item.description }}
-            </a>
-          </div>
+          <a-card hoverable style="height: 100%">
+            <template #cover>
+              <div class="content-cover">
+                <a :href="item.detail">
+                  <img :src="item.src" :alt="item.title" />
+                </a>
+              </div>
+            </template>
+            <a-card-meta :title="item.title">
+              <template #description>
+                <a :href="item.detail">
+                  {{ item.description }}
+                </a>
+              </template>
+            </a-card-meta>
+          </a-card>
         </swiper-slide>
       </swiper>
     </div>
@@ -95,16 +98,8 @@ const breakpoints = {
 
 .swiper-slide {
   height: auto;
-  background: #fff;
   border-radius: 10px;
   user-select: none;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-}
-
-.swiper-slide:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .content-cover {

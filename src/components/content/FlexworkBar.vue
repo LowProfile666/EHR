@@ -14,22 +14,22 @@
 import { ref } from "vue";
 import SolutionBar from "./SolutionBar.vue";
 
-const barTitle = ref("灵活用工与外包服务");
+const barTitle = ref("人力资源管理咨询");
 const barDescription = ref(
-  "通过多样化的用工形式和专业外包服务，帮助企业灵活应对用工需求，优化人力成本，提高运营效率。专注于外包服务，包括人力服务外包、产线外包和项目外包，高效支持企业非核心业务的专业化管理。",
+  "人力资源管理咨询专注于为企业提供系统化、专业化的人力资源解决方案，涵盖人力资源规划、薪酬福利设计、绩效激励体系、培训开发、劳动关系管理、招聘配置优化以及HR三支柱（HRBP、COE、SSC）建设等领域。通过科学的管理工具与数据支持，帮助企业优化人力资源配置，激发组织活力，提升员工效率，助力企业实现战略目标与可持续发展。",
 );
 
 const data = ref([
   {
     id: "1",
-    title: "劳务派遣",
+    title: "人力资源规划",
     description: "湖北睿才始于2005年在湖北荆门成立，提供优质人力资源服务。",
     src: "/src/assets/images/solution/001.svg",
     detail: "/detail/1",
   },
   {
     id: "2",
-    title: "人力资源外包（HRO）",
+    title: "薪酬福利",
     description:
       "我们提供系统的企业培训解决方案，帮助企业提升员工技能，促进团队成长。",
     src: "/src/assets/images/solution/002.svg",
@@ -37,7 +37,35 @@ const data = ref([
   },
   {
     id: "3",
-    title: "项目外包",
+    title: "绩效激励",
+    description: "专家团队为客户提供专业的人力资源管理咨询服务。",
+    src: "/src/assets/images/solution/003.svg",
+    detail: "/detail/3",
+  },
+  {
+    id: "4",
+    title: "培训开发",
+    description: "专家团队为客户提供专业的人力资源管理咨询服务。",
+    src: "/src/assets/images/solution/003.svg",
+    detail: "/detail/3",
+  },
+  {
+    id: "5",
+    title: "劳动关系",
+    description: "专家团队为客户提供专业的人力资源管理咨询服务。",
+    src: "/src/assets/images/solution/003.svg",
+    detail: "/detail/3",
+  },
+  {
+    id: "6",
+    title: "招聘配置",
+    description: "专家团队为客户提供专业的人力资源管理咨询服务。",
+    src: "/src/assets/images/solution/003.svg",
+    detail: "/detail/3",
+  },
+  {
+    id: "7",
+    title: "HR三支柱",
     description: "专家团队为客户提供专业的人力资源管理咨询服务。",
     src: "/src/assets/images/solution/003.svg",
     detail: "/detail/3",

@@ -12,7 +12,7 @@
         </p>
       </div>
       <div class="content">
-        <a-row :gutter="20">
+        <a-row :gutter="30">
           <a-col span="auto" v-for="item in cardObjs" :key="item.id">
             <a-card
               class="content-card"
@@ -41,40 +41,46 @@ interface cardObj {
 
 const isVisible = ref(false); // 控制背景显现的状态
 const targetSection = ref(null); // 目标区域的 DOM 引用
-const barTitle = ref("人才招聘与管理服务");
+const barTitle = ref("劳务");
 const barDescription = ref(
-  "为企业提供全方位的人才寻访、招聘与管理解决方案，助力企业挖掘、培养和管理优秀人才。",
+  "劳务服务涵盖劳务挂靠、产线外包、劳务派遣、代招聘、饭堂外包、绿化外包等多元化业务，通过专业化管理和灵活的用工模式，为企业提供高效、可靠的解决方案，助力企业降低运营成本、优化资源配置，实现专注核心业务发展和提升竞争力的目标。",
 );
 const cardObjs = ref<cardObj[]>([
   {
     id: 1,
-    title: "猎头",
+    title: "劳务挂靠",
     description: "",
     src: "/src/assets/images/talent/猎头.png",
   },
   {
     id: 2,
-    title: "代理招聘",
+    title: "产线外包",
     description: "",
     src: "/src/assets/images/talent/代理招聘.png",
   },
   {
     id: 3,
-    title: "职业规划",
+    title: "劳务派遣",
     description: "",
     src: "/src/assets/images/talent/劳务派遣.png",
   },
   {
     id: 4,
-    title: "人才测评盘点",
+    title: "代招聘",
     description: "",
     src: "/src/assets/images/talent/人事挂靠.png",
   },
   {
     id: 5,
-    title: "人事档案托管",
+    title: "饭堂",
     description: "",
-    src: "/src/assets/images/talent/档案管理.png",
+    src: "/src/assets/images/talent/劳务派遣.png",
+  },
+  {
+    id: 6,
+    title: "绿化",
+    description: "",
+    src: "/src/assets/images/talent/劳务派遣.png",
   },
 ]);
 

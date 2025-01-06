@@ -34,9 +34,9 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 
-const barTitle = ref("共享人力资源解决方案");
+const barTitle = ref("E-HR");
 const barDescription = ref(
-  "通过共享人力资源管理中心，提供人力资源管理深度服务，提升企业内部人力资源运作效率。提供创新型共享HR服务，通过资源整合与专业支持，助力中小企业高效管理人力资源，实现可持续发展。",
+  "提供专业全面的E-HR系统管理服务有效便捷解决人力资源管理繁杂的问题，提升管理执行力和透明度等",
 );
 
 const data = ref([
@@ -121,6 +121,7 @@ const data = ref([
   background-size: cover; /* 确保背景图片覆盖整个容器 */
   background-repeat: no-repeat; /* 防止背景重复 */
   background-position: center; /* 背景图片居中对齐 */
+  user-select: none;
 }
 
 .text-area {

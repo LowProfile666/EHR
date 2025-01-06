@@ -11,3 +11,9 @@ export function getNewsArticles() {
     url: "/public/index/news",
   });
 }
+
+export function getArticleById(id) {
+  return myAxios.request({
+    url: `/public/article/${id}`,
+  });
+}

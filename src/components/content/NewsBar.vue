@@ -18,7 +18,7 @@
           v-for="(news, index) in newsCard"
           :key="index"
           class="card"
-          @click="detail(news.id, news.detailUrl)"
+          @click="detail(news.id)"
         >
           <template #cover>
             <div class="card-img-area">
@@ -38,7 +38,7 @@
                   <router-link
                     :to="{
                       name: 'Detail',
-                      params: { id: item.id, detailUrl: item.detailUrl },
+                      params: { articleId: item.id },
                     }"
                     >{{ item.title }}</router-link
                   >
@@ -76,7 +76,7 @@ interface News {
   title: string;
   description: string;
   detailUrl: string;
-  time: string;
+  createTime: string;
 }
 
 const props = defineProps({
@@ -103,8 +103,8 @@ const more = () => {
   });
 };
 
-const detail = (id, url) => {
-  router.push({ name: "Detail", params: { id, url } });
+const detail = (id) => {
+  router.push({ name: "Detail", params: { articleId: id } });
 };
 </script>
 

@@ -17,10 +17,7 @@
           <div class="info-title">{{ slide.title }}</div>
           <div class="info-desc">{{ slide.description }}</div>
           <div class="info-detail-button">
-            <a-button
-              ghost
-              size="large"
-              @click="detail(slide.id, slide.detailUrl)"
+            <a-button ghost size="large" @click="detail(slide.id)"
               >点击查看详情</a-button
             >
           </div>
@@ -56,8 +53,8 @@ const modules = [Autoplay, Pagination, Navigation, A11y];
 const slides = ref<Slide[]>(props.data);
 const router = useRouter();
 
-const detail = (id, url) => {
-  router.push({ name: "Detail", params: { id, url } });
+const detail = (id) => {
+  router.push({ name: "Detail", params: { articleId: id } });
 };
 </script>
 
